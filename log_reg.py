@@ -100,7 +100,7 @@ y = np.array( [
 std_scaler = StandardScaler()
 x_train_std = std_scaler.fit_transform(x)
 
-poly = PolynomialFeatures(degree=2)
+poly = PolynomialFeatures(degree=1)
 x_train_poly = poly.fit_transform(x_train_std)
 
 model = RidgeClassifier(alpha=100.0, class_weight='balanced')
